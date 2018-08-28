@@ -1,0 +1,8 @@
+#baseURL = "https//ade9527.github.io/"
+#baseURL = "file:///home/ade/workspaces/blog/hugo/myblog/public/"
+languageCode = "en-us"
+title = "王正华的博客"
+#theme = "kraiklyn"
+#theme = "hugo-pacman-theme"
+#theme = "hyde"
+theme = "hugo-theme-learn"
