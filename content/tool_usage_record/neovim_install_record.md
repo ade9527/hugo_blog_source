@@ -21,6 +21,10 @@ sudo apt install neovim
 
 ### 插件管理工具
 
+### 自动补全工具
+
+### 
+
 ## 一些问题
 
 ### 使用系统剪切板
@@ -39,4 +43,4 @@ map <C-v> "+p
 
 ## 配置文件
 最后附上我的配置文件:
-[~/.config/nvim/init.vim]()
+[~/.config/nvim/init.vim](https://github.com/ade9527/hugo_blog_source/blob/master/static/tool_configs/init.vim)
