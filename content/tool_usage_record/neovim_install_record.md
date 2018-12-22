@@ -3,6 +3,8 @@ title: "neovim的安装配置记录"
 date: 2018-08-25T23:13:50+08:00
 ---
 
+[TOC]
+
 记录安装过程和使用的插件安装,及使用中遇到的一些问题.
 
 ## 1.安装neovim
@@ -21,8 +23,8 @@ sudo apt install neovim
 
 ### 2.1插件管理工具
 
-- curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
--    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+> curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+> \> https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
 ### 2.2自动补全工具YCM
@@ -44,6 +46,17 @@ map <C-v> "+p
 ```
 可以在`NORMAL`模式中使用`Ctrl-c` `Ctrl-v`, `Ctrl-c`使用时可以在之前输入数字表示要复制多少行,或者在`VISUAL`模式中选中后使用.
 
+### 安装后YCM 后打开vim报错,
+
+> YouCompleteMe unavailable: requires Vim compild with Python (2.7.1+ or 3.4+) support.
+这个错误是应为安装的`neovim`不支持python.可以用pip 安装neovim.用下面的命令更新neovim.
+> pip3 install neovim --upgrade
+
+进入vim后报下面的错误
+> The ycmd server SHUT_DOWN restart with YcmRestartServer...
+可以进入YCM插件目录执行`python install.py`,以解决这个问题.
+> cd ~/.config/nvim/plugged/YouCompleteMe/
+> python install.py
 
 ## 4.配置文件
 最后附上我的配置文件:
